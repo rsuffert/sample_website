@@ -1,0 +1,1 @@
+$('.slider-principal').slick(); // . indica classe, e # indica id. Esta atribuindo isso para o slider principal

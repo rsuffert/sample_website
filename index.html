@@ -1,0 +1,94 @@
+<!-- boas praticas: a tag <main> é usada apenas para englobar o conteúdo principal do site. É uma div com semantica -->
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css"> <!-- referencia para a folha de estilo main.css -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!-- CSS do carrossel -->
+        <title>Web World</title>
+    </head>
+    <body> <!-- segura todo o conteudo da pagina e pode ser referenciado diretamente no css com "body" -->
+        <header class="menu-principal"> <!-- como o nome diz, define o cabecalho da pagina (geralmente, colocam-se logos, titulo da pagina, informacoes de contato) -->
+            <main> <!-- secao do logo + redes sociais-->
+                <div class ="header-1"> <!-- div para toda a parte em preto (logo + redes sociais) -->
+                    <div class="logo"> <!-- div para o logo -->
+                        <img src="img/logo.png"/>
+                    </div>
+                    <div class="redes-sociais"> <!-- div para as redes sociais -->
+                        <ul> <!-- lista de imagens (logos) com links para as redes sociais -->
+                            <li>
+                                <a href=""> <!-- tag 'a' faz com que os usuários cliquem na imagem e sejam direcionados para o link-->
+                                    <img src="img/rss.png"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""> <!-- tag 'a' faz com que os usuários cliquem na imagem e sejam direcionados para o link-->
+                                    <img src="img/face.png"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""> <!-- tag 'a' faz com que os usuários cliquem na imagem e sejam direcionados para o link-->
+                                    <img src="img/tw.png"/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""> <!-- tag 'a' faz com que os usuários cliquem na imagem e sejam direcionados para o link-->
+                                    <img src="img/linkedin.png"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </header>
+        <main class ="col-100 menu-urls">
+            <div class="header-2"> <!-- secao da barrra de selecao e do campo de busca -->
+                <div class="menu"> <!-- secao das barra de selecao, dentro da secao do header-2 -->
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">About Us</a>
+                        </li>
+                        <li>
+                            <a href="">Service</a>
+                        </li>
+                        <li>
+                            <a href="">Pages</a>
+                        </li>
+                        <li>
+                            <a href="">Blog</a>
+                        </li>
+                        <li>
+                            <a href="">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="busca">
+                    <input placeholder="Search Something" type="text"/>
+                </div>
+            </div>
+        </main>
+        <div class="col-100"> <!-- col-100 para ocupar 100% da tela -->
+            <div class="slider-principal"> <!-- padrao buscado do site do slick slider para utilizar a biblioteca -->
+                <div>
+                    <img src="img/banner.png">
+                </div>
+                <div>
+                    <img src="img/banner.png">
+                </div>
+                <div>
+                    <img src="img/banner.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- tags para uso da biblioteca slick slider (para o carrossel de imagens) -->
+        <!-- boa pratica: tags de script colocadas ao final do body, para carregar o CSS primeiro e renderizar a pagina primeiro -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- <script type="text/javascript" src="slick/slick.min.js"></script> --> <!-- esse arquivo precisa ser baixado --> 
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> <!-- esse CDN pode ser usado no lugar da tag de cima para nao precisar baixar o arquivo e te-lo localmente -->
+        <script type="text/javascript" src="js/main.js"></script> <!-- associando ao HTML o script JS  -->
+    </body>
+</html>
