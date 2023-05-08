@@ -105,3 +105,35 @@ main {
     border-bottom: 3px solid #efefef;
     height: 80px;
 }
+
+button.slick-prev { /* inspecionando o elemento, eh possivel ver que o botao do carrosel esta atribuido a essa classe. Ao adicionar button na frente, apenas os elementos HTML do tipo button que pertencem a essa classe serao modificados, e nao todos os elementos da classe */
+    /* resetando o botao */
+    font-size: 0px;
+    border: none;
+    background-color: transparent;
+    /* configurando o botao com as caracteristicas (valores) da imagem da seta */
+    height: 51px;
+    width: 25px;
+    background-image: url('../img/anterior.png');
+    /* posiiconando o botao */
+    position: absolute; /* com position: relative, o elemento fica ocupando seu espaço no fluxo normal da pagina, ou seja, outros elementos na pagina sao posicionados levando em conta o espaco que o elemento ocupa, mesmo que sejam alteradas as propriedades "top", "bottom", "left" e "right". Com position:absolute, o elemento é retirado do fluxo normal da pagina e pode ser posicionado em qualquer lugar dentro do elemento pai que tenha uma posicao definida, sem afetar outros elementos na pagina. Assim, ele pode ser posicionado de forma absoluta usando as propriedades "top", "bottom", "left" e "right". "Relative" posiciona elementos com relacao a sua posicao original, enquanto "absolute" posiciona com relacao ao elemento pai mais proximo que tenha uma posicao definida (seja ela "relative" ou "absolute", mas nao "static", que eh o valor padrao) */
+    z-index: 9; /* permite posicionar o elemento em cima de outras layers. Como seu valor eh 9, sua ordem de empilhamento eh maior do que outros elementos com valores z-index menores ou sem valor definido */
+    top: 25%;
+    left: 15%; /* posicionando o quao a esquerda deve estar o botao */
+}
+
+button.slick-next { /* inspecionando o elemento, eh possivel ver que o botao do carrosel esta atribuido a essa classe. Ao adicionar button na frente, apenas os elementos HTML do tipo button que pertencem a essa classe serao modificados, e nao todos os elementos da classe */
+    /* resetando o botao */
+    font-size: 0px;
+    border: none;
+    background-color: transparent;
+    /* configurando o botao com as caracteristicas (valores) da imagem da seta */
+    height: 51px;
+    width: 25px;
+    background-image: url('../img/proximo.png');
+    /* posiiconando o botao */
+    position: absolute; /* com position: relative, o elemento fica ocupando seu espaço no fluxo normal da pagina, ou seja, outros elementos na pagina sao posicionados levando em conta o espaco que o elemento ocupa, mesmo que sejam alteradas as propriedades "top", "bottom", "left" e "right". Com position:absolute, o elemento é retirado do fluxo normal da pagina e pode ser posicionado em qualquer lugar dentro do elemento pai que tenha uma posicao definida, sem afetar outros elementos na pagina. Assim, ele pode ser posicionado de forma absoluta usando as propriedades "top", "bottom", "left" e "right". "Relative" posiciona elementos com relacao a sua posicao original, enquanto "absolute" posiciona com relacao ao elemento pai mais proximo que tenha uma posicao definida (seja ela "relative" ou "absolute", mas nao "static", que eh o valor padrao) */
+    z-index: 9; /* permite posicionar o elemento em cima de outras layers. Como seu valor eh 9, sua ordem de empilhamento eh maior do que outros elementos com valores z-index menores ou sem valor definido */
+    top: 25%;
+    right: 12%; /* posicionando o quao a direita deve estar o botao */
+}
