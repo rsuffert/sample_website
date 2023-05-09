@@ -1,3 +1,5 @@
+/* . p/ referenciar classes e # p/ referenciar ids */
+
 body {
     width: 100%;
     height: 100%;
@@ -136,4 +138,26 @@ button.slick-next { /* inspecionando o elemento, eh possivel ver que o botao do 
     z-index: 9; /* permite posicionar o elemento em cima de outras layers. Como seu valor eh 9, sua ordem de empilhamento eh maior do que outros elementos com valores z-index menores ou sem valor definido */
     top: 25%;
     right: 12%; /* posicionando o quao a direita deve estar o botao */
+}
+
+.slider-principal img { /* garantindo que o slider vai ocupar a tela toda, e que nao vai ter uma barra de rolagem abaixo dele que permite acessar todas as imagens */
+    /* no fim, acabou centralizando melhor o carrossel tbm */
+    width: 100%!important; /* (!important apenas para exemplificar; nao eh necessario)!important força uma regra a ter precedencia sobre outras, sobrescrevendo qualquer outra propriedade que possa ter sido definida anteriormente para o mesmo elemento, independentemente de sua especificidade. Se uma regra de menor especificidade entra em conflito com uma de maior especificidade, eh aplicada a de menor especificidade, a nao ser que se use um !important */
+}
+
+.slick-dots li button { /* representa os botoes do carrossel. eh uma ul (lista), sendo que cada item (li) eh um button */
+    /* estilizando cada um dos itens (li) da lista de botoes do carrossel (ul) */
+    font-size: 0px; /* removendo a numeracao dos botoes */
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.slick-dots li { /* exibindo os elementos da lista de botoes (li) lado a lado */
+    display: inline-block;
+}
+
+.slick-dots li.slick-active { /* por padrao, na documentacao, o a li ativa eh da classe slick-active */
+    background-color: #00bac6;
 }

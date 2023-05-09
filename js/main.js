@@ -4,5 +4,7 @@ $('.slider-principal').slick({ // . indica classe, e # indica id. Esta atribuind
     inifinite: true,
     speed: 300,
     slidesToShow: 1,
-    adaptativeHeight: true
+    adaptativeHeight: true,
+    autoplay: true,
+    autoplaySpeed: 2000
 });
