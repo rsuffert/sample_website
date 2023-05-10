@@ -134,7 +134,7 @@ button.slick-next { /* inspecionando o elemento, eh possivel ver que o botao do 
     width: 25px;
     background-image: url('../img/proximo.png');
     /* posiiconando o botao */
-    position: absolute; /* com position: relative, o elemento fica ocupando seu espaço no fluxo normal da pagina, ou seja, outros elementos na pagina sao posicionados levando em conta o espaco que o elemento ocupa, mesmo que sejam alteradas as propriedades "top", "bottom", "left" e "right". Com position:absolute, o elemento é retirado do fluxo normal da pagina e pode ser posicionado em qualquer lugar dentro do elemento pai que tenha uma posicao definida, sem afetar outros elementos na pagina. Assim, ele pode ser posicionado de forma absoluta usando as propriedades "top", "bottom", "left" e "right". "Relative" posiciona elementos com relacao a sua posicao original, enquanto "absolute" posiciona com relacao ao elemento pai mais proximo que tenha uma posicao definida (seja ela "relative" ou "absolute", mas nao "static", que eh o valor padrao) */
+    position: absolute; /* com position: relative, o elemento fica ocupando seu espaço no fluxo normal da pagina, ou seja, outros elementos na pagina sao posicionados levando em conta o espaco que o elemento ocupa, mesmo que sejam alteradas as propriedades "top", "bottom", "left" e "right". Com position:absolute, o elemento é retirado do fluxo normal da pagina e pode ser posicionado em qualquer lugar dentro do elemento pai que tenha uma posicao definida, sem afetar outros elementos na pagina. Assim, ele pode ser posicionado de forma absoluta usando as propriedades "top", "bottom", "left" e "right". "Relative" posiciona elementos com relacao a sua posicao original, enquanto "absolute" posiciona com relacao ao elemento pai mais proximo que tenha uma posicao definida (seja ela "relative", "absolute" ou "fixed", mas nao "static", que eh o valor padrao) */
     z-index: 9; /* permite posicionar o elemento em cima de outras layers. Como seu valor eh 9, sua ordem de empilhamento eh maior do que outros elementos com valores z-index menores ou sem valor definido */
     top: 25%;
     right: 12%; /* posicionando o quao a direita deve estar o botao */
@@ -145,19 +145,33 @@ button.slick-next { /* inspecionando o elemento, eh possivel ver que o botao do 
     width: 100%!important; /* (!important apenas para exemplificar; nao eh necessario)!important força uma regra a ter precedencia sobre outras, sobrescrevendo qualquer outra propriedade que possa ter sido definida anteriormente para o mesmo elemento, independentemente de sua especificidade. Se uma regra de menor especificidade entra em conflito com uma de maior especificidade, eh aplicada a de menor especificidade, a nao ser que se use um !important */
 }
 
-.slick-dots li button { /* representa os botoes do carrossel. eh uma ul (lista), sendo que cada item (li) eh um button */
-    /* estilizando cada um dos itens (li) da lista de botoes do carrossel (ul) */
+.slick-initialized {
+    overflow: hidden; /* garantindo que nao havera o scroll infinito do carrossel (garante que o conteudo do elemento nao sera exibido fora de seus limites) */
+}
+
+.slick-dots li button { /* estilizando os botoes do carrossel, que eh uma lista (ul) cujos itens (li) sao botoes */
     font-size: 0px; /* removendo a numeracao dos botoes */
     border: 3px solid #ffffff;
-    border-radius: 50%;
     width: 20px;
     height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer; /* define que, ao repousar o mouse sobre os botoes, o mouse se torna um dedo indicador, indicando que o componente pode ser clicado */
 }
 
-.slick-dots li { /* exibindo os elementos da lista de botoes (li) lado a lado */
-    display: inline-block;
+.slick-dots { /* posicionando os dots */
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 45%;
+    top: 60%;
 }
 
-.slick-dots li.slick-active { /* por padrao, na documentacao, o a li ativa eh da classe slick-active */
+.slick-dots li { /* exibindo todos os elementos da lista lado a lado */
+    display: inline-block; /* exibindo todos os elementos da lista lado a lado */
+    padding-left: 10px; /* definindo a distancia entre os itens da lista */
+}
+
+li.slick-active button { /* selecionando todas as li's da classe "slick-active", pegando seu botao e definindo suas caracteristicas */
     background-color: #00bac6;
 }
