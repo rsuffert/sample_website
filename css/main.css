@@ -21,7 +21,7 @@ ul {
     
 }
 
-main {
+main, .content { /* estilos aplicados tanto a tag  "main" quanto a classe "contain" */
     width: 980px;
     position: relative;
     margin: 0 auto; /* centraliza a div horizontalmente dentro de seu conteiner */
@@ -175,3 +175,43 @@ button.slick-next { /* inspecionando o elemento, eh possivel ver que o botao do 
 li.slick-active button { /* selecionando todas as li's da classe "slick-active", pegando seu botao e definindo suas caracteristicas */
     background-color: #00bac6;
 }
+
+.texto-destaque { 
+    text-align: center; /* centralizando todo o texto do bloco */
+}
+
+.texto-destaque p { /* estilizando o paragrafo em texto-destaque */
+    color: #9a9a9a;
+    font-size: 15px;
+}
+
+.texto-destaque h1 { /* estilizando o titulo */
+    color: #818181;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.texto-destaque h1 strong {
+    color: #646464;
+}
+
+.col-3 { /* colocando cada uma das fotos lado a lado */
+    width: 30%; /* cada imagem ocupara 30% da area (deixando espaco para o padding) */
+    float: left;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bloco-texto {
+    margin-top: 3em; /* "em" -> calcula o tamanho baseado no tamanho da fonte do elemento pai mais proximo (se a fonte for 16px, 1em = 16px, 23m = 32px etc.) -> util para sites mais responsivos    */
+        /* "rem" -> baseado no tamanho da fonte do elemento RAIZ */   
+}
+
+h3, h1 { /* resetar o h3 e o h1, pois o Chrome o coloca como em negrito */
+    font-weight: normal!important; /* !important para garantir que sera sobrescrito */
+}
+
+/* ao dizer "button.slick-prev", o estilo sera aplicado a todos os buttons que tem o a classe "slick-prev" */
+/* ao dizer ".slick-prev button", o estilo sera aplicado a todos os buttons que estao dentro de um componente marcado com a classe "slick-prev" */
+/* essa ordem corresponde a ordem de aplicacao dos filtros */
